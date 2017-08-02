@@ -10,7 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        
+        <?php echo 'oi'; ?>
         <h1>Hello World</h1>
         
     </body>
