@@ -224,7 +224,7 @@
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
-                                <i class="fa fa-dashboard"></i> Gabriel -  Helen
+                                <i class="fa fa-dashboard"></i> Gabriel -  aHelen
                             </li>
                         </ol>
                     </div>
