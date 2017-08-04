@@ -5,7 +5,7 @@
 class PrimeUpLogstashConverterInputBuilder {
    
     public static function buildInputHeader(){
-        ]
+        
     }
    
 }
