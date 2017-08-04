@@ -10,7 +10,9 @@
     <meta name="author" content="">
 
     <title>Projeto ELK - Converter</title>
-
+    <?php 
+        include('./DataBaseUtils/ConnectionBD.php');
+    ?>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
