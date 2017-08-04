@@ -246,7 +246,7 @@
               echo "0 records";
           } else {
               while ($row = pg_fetch_array($test)) {
-                  echo $row;
+                  print_r($row);
               }
           }
     ?></strong> Calma ai
