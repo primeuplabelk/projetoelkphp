@@ -10,21 +10,6 @@
     <meta name="author" content="">
 
     <title>Projeto ELK - Converter</title>
-    <?php 
-        include('./DataBaseUtils/ConnectionBD.php');
-        $test = pg_query($con,"select * from elk.conf");
-
-        if (!$test) {
-              echo "query did not execute";
-          }
-          if (pg_num_rows($test) == 0) {
-              echo "0 records";
-          } else {
-              while ($row = pg_fetch_array($test)) {
-                  echo $row;
-              }
-          }
-    ?>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -250,7 +235,21 @@
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <i class="fa fa-info-circle"></i>  <strong>Estamos desenvolvendo ainda</strong> Calma ai
+                            <i class="fa fa-info-circle"></i>  <strong><?php 
+        include('./DataBaseUtils/ConnectionBD.php');
+        $test = pg_query($con,"select * from elk.conf");
+
+        if (!$test) {
+              echo "query did not execute";
+          }
+          if (pg_num_rows($test) == 0) {
+              echo "0 records";
+          } else {
+              while ($row = pg_fetch_array($test)) {
+                  echo $row;
+              }
+          }
+    ?></strong> Calma ai
                         </div>
                     </div>
                 </div>
