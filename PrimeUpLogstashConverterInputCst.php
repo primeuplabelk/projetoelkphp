@@ -2,7 +2,7 @@
 
 
 
-class PrimeUpLogstashConverterInput {
+class PrimeUpLogstashConverterInputCst {
     
     const INPUT_TAG_OPENING = "input{";
     const FILE_TAG_OPENING = "file{";
