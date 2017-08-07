@@ -245,19 +245,19 @@
                     </div>
                     <div class="form-group">
                         <label>Raiz dos Logs</label>
-                        <input id="path" class="form-control" placeholder="Caminho dos logs">
+                        <input id="path" name="path" class="form-control" placeholder="Caminho dos logs">
                     </div>
                     <div class="form-group">
                         <label>Ignore Older</label>
-                        <input id ="ignore_older" class="form-control" placeholder="Ignore Older(Seconds)">
+                        <input id ="ignore_older" name="ignore_older" class="form-control" placeholder="Ignore Older(Seconds)">
                     </div>
                     <div class="form-group">
                         <label>SinceDBPath</label>
-                        <input id ="sincedb_path" class="form-control" placeholder="Std -> /dev/null ">
+                        <input id ="sincedb_path" name="sincedb_path" class="form-control" placeholder="Std -> /dev/null ">
                     </div>
                     <div class="form-group">
                         <label>Charset</label>
-                        <select id="charset" class="form-control">
+                        <select id="charset" name="charset" class="form-control">
                             <option value="ANSI_X3.4-1968" >ANSI_X3.4-1968</option>
                             <option value="UTF-8" >UTF-8</option>
                         </select>

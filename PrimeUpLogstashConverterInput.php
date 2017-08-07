@@ -1,4 +1,5 @@
 <?php
+include('./PrimeUpLogstashConverterInputBuilder.php');
 
 $params = array(
     "path" => $_REQUEST['path'], 
@@ -8,4 +9,5 @@ $params = array(
     "charset" => $_REQUEST['charset']	
  );
 
-print_r($params);
+$builder = new PrimeUpLogstashConverterInputBuilder();
+echo $builder::buildInputHeader($params);
