@@ -238,7 +238,7 @@
                     <label>File Configuration</label><br><br>
                     <div class="form-group">
                         <label>Start Position</label>
-                        <select id = "start_position" class="form-control">
+                        <select id = "start_position" name = "start_position" class="form-control">
                             <option value="beginning" >Beggining</option>
                             <option value="end" >End</option>
                         </select>
