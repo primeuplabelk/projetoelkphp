@@ -9,6 +9,7 @@ class PrimeUpLogstashConverterInputBuilder {
         
         $inputFinalString = $inputCst::INPUT_TAG_OPENING;
         $inputFinalString .= $inputCst::SPACE;
+        $inputFinalString .= $inputCst::FILE_TAG_OPENING;
         return $inputFinalString;
     }
    
