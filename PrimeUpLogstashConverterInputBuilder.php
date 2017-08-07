@@ -19,7 +19,7 @@ class PrimeUpLogstashConverterInputBuilder {
             $inputFinalString .= $inputCst::LINE_BREAK;
                 
             
-            if(!is_null($params["start_position"])){
+            if(strcmp($params["start_position"], "") != 0){
                 
                 $inputFinalString .= $inputCst::STARTING_POSITION_TAG;
                 $inputFinalString .= $params["start_position"];
@@ -27,7 +27,7 @@ class PrimeUpLogstashConverterInputBuilder {
             
             }
             
-            if(!is_null($params["ignore_older"])){
+            if(strcmp($params["ignore_older"], "") != 0){
                 
                 $inputFinalString .= $inputCst::IGNORE_OLDER_TAG;
                 $inputFinalString .= $params["ignore_older"];
@@ -43,7 +43,7 @@ class PrimeUpLogstashConverterInputBuilder {
                 
             }
             
-            if(!is_null($params["charset"])){
+            if(strcmp($params["charset"], "") != 0){
                 $inputFinalString .= $inputCst::CODEC_TAG;
                 $inputFinalString .= $inputCst::CODEC_TAG_PLAIN;
                 $inputFinalString .= $inputCst::LINE_BREAK;
