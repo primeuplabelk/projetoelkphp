@@ -12,7 +12,7 @@ class PrimeUpLogstashConverterInputBuilder {
             $inputFinalString .= $inputCst::FILE_TAG_OPENING;
             $inputFinalString .= $inputCst::LINE_BREAK;
             $inputFinalString .= $inputCst::PATH_TAG;
-           // $inputFinalString .= $params("path");
+            $inputFinalString .= $params["path"];
             $inputFinalString .= $inputCst::LINE_BREAK;
             $inputFinalString .= $inputCst::STARTING_POSITION_TAG;
             //$inputFinalString .= $params("starting_position");
@@ -28,6 +28,7 @@ class PrimeUpLogstashConverterInputBuilder {
             $inputFinalString .= $inputCst::LINE_BREAK;
             $inputFinalString .= $inputCst::CHARSET_TAG;
             //$inputFinalString .= $params("charset");
+            $inputFinalString .= $inputCst::LINE_BREAK;
             $inputFinalString .= $inputCst::CLOSING_BRACKETS;
             $inputFinalString .= $inputCst::LINE_BREAK;        
             $inputFinalString .= $inputCst::CLOSING_BRACKETS;
