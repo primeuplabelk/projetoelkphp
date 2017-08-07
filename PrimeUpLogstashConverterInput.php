@@ -8,4 +8,4 @@ $params = array(
     "charset" => $_REQUEST['charset']	
  );
 
-echo $params("path") . " " . $params("charset");
+//echo $params("path") . " " . $params("charset");
