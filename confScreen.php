@@ -183,7 +183,7 @@
                         <a href=""><i class="fa fa-fw fa-bar-chart-o"></i> Gráficos</a>
                     </li>
                     <li>
-                        <a href="confScreen.php"><i class="fa fa-fw fa-table"></i> Confs</a>
+                        <a href=""><i class="fa fa-fw fa-table"></i> Confs</a>
                     </li>
                     <li>
                         <a href=""><i class="fa fa-fw fa-edit"></i> JSON</a>
@@ -234,15 +234,15 @@
                     </div>
                 </div> 
                 <!-- /.row -->
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="alert alert-info alert-dismissable">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <i class="fa fa-info-circle"></i>  <strong><?php echo PrimeUpLogstashConverterInputBuilder::buildInputHeader("");  ?></strong> Calma ai
-                        </div>
+                <form method="post" action="">
+                    <div class="form-group">
+                        <label>Input - Start Position</label>
+                        <select class="form-control">
+                            <option value="beginning" id="sp_beg">Beggining</option>
+                            <option value="end" id="sp_end">End</option>
+                        </select>
                     </div>
-                </div>
+                </form>
                 <!-- /.row -->
 
                 <!--<div class="row">
