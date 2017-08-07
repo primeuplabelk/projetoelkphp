@@ -15,7 +15,7 @@ class PrimeUpLogstashConverterInputBuilder {
             $inputFinalString .= $params["path"];
             $inputFinalString .= $inputCst::LINE_BREAK;
             $inputFinalString .= $inputCst::STARTING_POSITION_TAG;
-            $inputFinalString .= $params["starting_position"];
+            $inputFinalString .= $params["start_position"];
             $inputFinalString .= $inputCst::LINE_BREAK;
             $inputFinalString .= $inputCst::IGNORE_OLDER_TAG;
             $inputFinalString .= $params["ignore_older"];
