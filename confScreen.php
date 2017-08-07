@@ -234,32 +234,32 @@
                     </div>
                 </div> 
                 <!-- /.row -->
-                <form method="post" action="">
-                    <label>File Configuration</label>
+                <form method="post" action="PrimeUpLogstashConverterInput.php">
+                    <label>File Configuration</label><br><br>
                     <div class="form-group">
                         <label>Start Position</label>
-                        <select class="form-control">
-                            <option value="beginning" id="sp_beg">Beggining</option>
-                            <option value="end" id="sp_end">End</option>
+                        <select id = "start_position" class="form-control">
+                            <option value="beginning" >Beggining</option>
+                            <option value="end" >End</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Raiz dos Logs</label>
-                        <input class="form-control" placeholder="Caminho dos logs">
+                        <input id="path" class="form-control" placeholder="Caminho dos logs">
                     </div>
                     <div class="form-group">
                         <label>Ignore Older</label>
-                        <input id ="io_seconds" class="form-control" placeholder="Ignore Older(Seconds)">
+                        <input id ="ignore_older" class="form-control" placeholder="Ignore Older(Seconds)">
                     </div>
                     <div class="form-group">
                         <label>SinceDBPath</label>
-                        <input id ="io_seconds" class="form-control" placeholder="Std -> /dev/null ">
+                        <input id ="sincedb_path" class="form-control" placeholder="Std -> /dev/null ">
                     </div>
                     <div class="form-group">
                         <label>Charset</label>
-                        <select class="form-control">
-                            <option value="ANSI_X3.4-1968" id="ansi">ANSI_X3.4-1968</option>
-                            <option value="UTF-8" id="utf8">UTF-8</option>
+                        <select id="charset" class="form-control">
+                            <option value="ANSI_X3.4-1968" >ANSI_X3.4-1968</option>
+                            <option value="UTF-8" >UTF-8</option>
                         </select>
                     </div>
                     
