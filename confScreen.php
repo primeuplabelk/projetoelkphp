@@ -235,13 +235,35 @@
                 </div> 
                 <!-- /.row -->
                 <form method="post" action="">
+                    <label>File Configuration</label>
                     <div class="form-group">
-                        <label>Input - Start Position</label>
+                        <label>Start Position</label>
                         <select class="form-control">
                             <option value="beginning" id="sp_beg">Beggining</option>
                             <option value="end" id="sp_end">End</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label>Raiz dos Logs</label>
+                        <input class="form-control" placeholder="Caminho dos logs">
+                    </div>
+                    <div class="form-group">
+                        <label>Ignore Older</label>
+                        <input id ="io_seconds" class="form-control" placeholder="Ignore Older(Seconds)">
+                    </div>
+                    <div class="form-group">
+                        <label>SinceDBPath</label>
+                        <input id ="io_seconds" class="form-control" placeholder="Std -> /dev/null ">
+                    </div>
+                    <div class="form-group">
+                        <label>Charset</label>
+                        <select class="form-control">
+                            <option value="ANSI_X3.4-1968" id="ansi">ANSI_X3.4-1968</option>
+                            <option value="UTF-8" id="utf8">UTF-8</option>
+                        </select>
+                    </div>
+                    
+
                 </form>
                 <!-- /.row -->
 
