@@ -28,7 +28,6 @@ $builder = new PrimeUpLogstashConverterInputBuilder();
         //$res_input .= $builder::buildInputHeader($params3);  
         
     }
-
-
-
+    
+    echo $res_input;
 
