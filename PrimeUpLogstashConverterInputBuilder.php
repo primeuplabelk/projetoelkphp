@@ -1,12 +1,14 @@
 <?php
 
-include("./PrimeUpLogstashConverterInput.php");
+include("./PrimeUpLogstashConverterInputCst.php");
 
 class PrimeUpLogstashConverterInputBuilder {
    
     public static function buildInputHeader($params){
-        $inputFinalString = PrimeUpLogstashConverterInput::INPUT_TAG_OPENING;
-        $inputFinalString . "teste";
+        $inputCst = new PrimeUpLogstashConverterInputCst;
+        
+        $inputFinalString = $inputCst::INPUT_TAG_OPENING;
+        $inputFinalString .= $inputCst::SPACE;
         return $inputFinalString;
     }
    
