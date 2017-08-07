@@ -4,7 +4,7 @@ include("./PrimeUpLogstashConverterInputCst.php");
 
 class PrimeUpLogstashConverterInputBuilder {
    
-    public static function buildInputHeader(array $params){
+    public static function buildInputHeader($params){
         $inputCst = new PrimeUpLogstashConverterInputCst;
         
             $inputFinalString = $inputCst::INPUT_TAG_OPENING;
