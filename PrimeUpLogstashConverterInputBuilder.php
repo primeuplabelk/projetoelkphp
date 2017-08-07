@@ -21,9 +21,9 @@ class PrimeUpLogstashConverterInputBuilder {
             $inputFinalString .= $inputCst::LINE_BREAK;        
             $inputFinalString .= $inputCst::CLOSING_BRACKETS;
             
-            //$inputFinalString2 = str_replace("\n", "<br>",$inputFinalString);
+            $inputFinalString2 = str_replace("\n", "<br>",$inputFinalString);
             
-       return $inputFinalString;
+       return $inputFinalString2;
     }
    
 }
