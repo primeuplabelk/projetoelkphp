@@ -23,7 +23,7 @@ class PrimeUpLogstashConverterInputBuilder {
             
             $inputFinalString2 = str_replace("\n", "<br>",$inputFinalString);
             
-             file_put_contents("C:/file.conf", $inputFinalString);
+             file_put_contents("/confExp/test.conf", $inputFinalString);
             
        return $inputFinalString2;
     }
