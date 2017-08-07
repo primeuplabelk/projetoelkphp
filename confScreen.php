@@ -237,6 +237,18 @@
                 <form method="post" action="PrimeUpLogstashConverterInput.php">
                     <label>File Configuration</label><br><br>
                     <div class="form-group">
+                        <label>Number of Files</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="numeroFiles" id="optionsRadiosInline1" value="1" checked>1
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="numeroFiles" id="optionsRadiosInline2" value="2">2
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="numeroFiles" id="optionsRadiosInline3" value="3">3
+                        </label>
+                    </div>
+                    <div class="form-group">
                         <label>Start Position</label>
                         <select id = "start_position" name = "start_position" class="form-control">
                             <option value="beginning" >Beggining</option>
