@@ -35,7 +35,7 @@ class PrimeUpLogstashConverterInputBuilder {
             
             }
             
-            if(!is_null($params["sincedb_path"])){
+            if(strcmp($params["sincedb_path"], "") != 0){
                 
                 $inputFinalString .= $inputCst::SINCEDB_PATH_TAG;
                 $inputFinalString .= $params["sincedb_path"];
