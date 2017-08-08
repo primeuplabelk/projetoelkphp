@@ -11,9 +11,11 @@ function saveInputConfContent($inputContent, $confName){
    $result = "";
    
    try {
-       $select = pg_query("select * from elk.conf where conf_name like 'qqr'");
+       $select = pg_query("select * from elk.conf");
        
-       while ($row = pg_fetch_array($select)) {
+       print_r($select);
+       
+       /*while ($row = pg_fetch_array($select)) {
             $selectArray[] = $row;
        }
        
@@ -30,7 +32,7 @@ function saveInputConfContent($inputContent, $confName){
            
             $result = "O nome do conf já existe";
             //update
-       }
+       }*/
     } catch (Exception $e) {
         echo "Erro";
     }
