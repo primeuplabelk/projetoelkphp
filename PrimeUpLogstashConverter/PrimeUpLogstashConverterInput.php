@@ -1,8 +1,10 @@
 <?php
 include('./PrimeUpLogstashConverterInputBuilder.php');
+include ('../DataBaseUtils/dataManipulation.php');
 
 $params = array(
     "numeroFiles" => $_REQUEST['numeroFiles'],
+    "confName" => $_REQUEST['confName'],
     "path" => $_REQUEST['path'], 
     "start_position" => $_REQUEST['start_position'], 
     "ignore_older" => $_REQUEST['ignore_older'], 
@@ -29,5 +31,6 @@ $builder = new PrimeUpLogstashConverterInputBuilder();
         
     }
     
+    saveInputConfContent($res_input, $params['confName']);
     echo $res_input;
 
