@@ -32,16 +32,7 @@ $builder = new PrimeUpLogstashConverterInputBuilder();
         
     }
     
-    //$retorno = saveInputConfContent($res_input, $params["confName"]);
+    $retorno = saveInputConfContent($res_input, $params["confName"]);
     //echo $params["confName"];
     echo $res_input;
     //echo "/n";
-    
-     $select = pg_query("select * from elk.conf");
-       
-     
-					while($row = pg_fetch_array($select)){
-                                            print_r($row);
-					}
-    
-

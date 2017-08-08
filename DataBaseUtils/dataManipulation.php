@@ -17,7 +17,7 @@ function saveInputConfContent($inputContent, $confName){
        
        print_r($select);
        
-       /*while ($row = pg_fetch_array($select)) {
+       while ($row = pg_fetch_array($select)) {
             $selectArray[] = $row;
        }
        
@@ -34,7 +34,7 @@ function saveInputConfContent($inputContent, $confName){
            
             $result = "O nome do conf já existe";
             //update
-       }*/
+       }
     } catch (Exception $e) {
         echo "Erro";
     }
