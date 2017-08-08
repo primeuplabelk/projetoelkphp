@@ -37,3 +37,7 @@ $builder = new PrimeUpLogstashConverterInputBuilder();
     $retorno = saveInputConfContent($inputFinalString, $params["confName"]);
     
     echo $retorno; 
+    
+    
+        echo "<script> location.href='https://projetoelk.herokuapp.com/'; </script>";
+        exit;
