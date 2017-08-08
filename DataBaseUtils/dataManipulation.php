@@ -11,7 +11,7 @@ function saveInputConfContent($inputContent, $confName){
    $result = "";
    
    try {
-       $select = pg_query("select * from elk.conf");
+       $select = pg_query("select * from elk.conf where conf_name = '{$cnf}' ");
        
        print_r($select);
        
