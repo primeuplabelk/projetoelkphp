@@ -257,7 +257,7 @@
                     </div>
                     <div class="form-group">
                         <label>Raiz dos Logs</label>
-                        <input id="path" name="path" class="form-control" placeholder="Caminho dos logs">
+                        <input id="path" name="path" class="form-control" placeholder="Caminho dos logs" required>
                     </div>
                     <div class="form-group">
                         <label>Ignore Older</label>

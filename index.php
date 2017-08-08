@@ -239,7 +239,7 @@
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <i class="fa fa-info-circle"></i>  <strong><?php echo PrimeUpLogstashConverterInputBuilder::buildInputHeader("");  ?></strong> Calma ai
+                            <i class="fa fa-info-circle"></i>  <strong><?php echo "Estamos desenvolvendo." ?></strong> Calma ai
                         </div>
                     </div>
                 </div>
