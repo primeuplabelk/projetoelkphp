@@ -38,6 +38,4 @@ $builder = new PrimeUpLogstashConverterInputBuilder();
     
     echo $retorno; 
     
-    
-        echo "<script> location.href='https://projetoelk.herokuapp.com/'; </script>";
-        exit;
+    header('Location: /index.php');
