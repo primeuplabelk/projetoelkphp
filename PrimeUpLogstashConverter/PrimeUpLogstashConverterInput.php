@@ -32,7 +32,7 @@ $builder = new PrimeUpLogstashConverterInputBuilder();
         
     }
     
-    $retorno = saveInputConfContent($res_input, $params["confName"]);
+    $retorno = saveInputConfContent($res_input, "testeeeeeeeeee");
     //echo $params["confName"];
     while ($row = pg_fetch_array($retorno)) {
             print_r ($row);

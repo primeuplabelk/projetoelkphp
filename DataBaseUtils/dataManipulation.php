@@ -23,7 +23,7 @@ function saveInputConfContent($inputContent, $confName){
 
            
         $insert = pg_query("insert into elk.conf (input_content, conf_name)
-                            values ('teste','teste')");
+                            values ('$inputContent','$confName')");
         
         
         $result = "Inserido";
