@@ -12,19 +12,24 @@ function saveInputConfContent($inputContent, $confName){
     
    $result = "";
    
-   //try {
+   try {
        $select = pg_query("select * from elk.conf");
        
-      /* print_r($select);
+       print_r($select);
        
        while ($row = pg_fetch_array($select)) {
             $selectArray[] = $row;
        }
        
        if(empty($selectArray)){
+           
+           $str1 = "teste";
+           $str2 = "teste2";
+                   
          
         $teste = pg_escape_string("insert into elk.conf (input_content, conf_name)
-                            values ('teste','teste')");  
+                            values ('$str1','$str2')");  
+        
                 
         $insert = pg_query($teste);
         
@@ -38,7 +43,7 @@ function saveInputConfContent($inputContent, $confName){
        }
     } catch (Exception $e) {
         echo "Erro";
-    }*/
+    }
     
     return $select;
 }
