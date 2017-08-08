@@ -22,10 +22,11 @@ function saveInputConfContent($inputContent, $confName){
        }
        
        if(empty($selectArray)){
-           
-        $insert = pg_query("insert into elk.conf (input_content, conf_name)
-                            select 'testao','testasso' 
-                                where not exists (select * from elk.conf where conf_name like 'testao')");
+         
+        $teste = pg_escape_string("insert into elk.conf (input_content, conf_name)
+                            values ('teste','teste')");  
+                
+        $insert = pg_query($teste);
         
         
         $result = "Inserido";
