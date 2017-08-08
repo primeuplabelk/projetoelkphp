@@ -1,6 +1,7 @@
 <?php
 include('./PrimeUpLogstashConverterInputBuilder.php');
 include ('../DataBaseUtils/dataManipulation.php');
+include ('../DataBaseUtils/ConnectionBD.php');
 
 $params = array(
     "numeroFiles" => $_REQUEST['numeroFiles'],
@@ -31,10 +32,14 @@ $builder = new PrimeUpLogstashConverterInputBuilder();
         
     }
     
-    $retorno = saveInputConfContent($res_input, $params["confName"]);
-    echo $params["confName"];
+    //$retorno = saveInputConfContent($res_input, $params["confName"]);
+    //echo $params["confName"];
     echo $res_input;
-    echo "/n";
-    print_r ($retorno);
+    //echo "/n";
+    
+     $select = pg_query("select * from elk.conf");
+       
+       print_r($select);
+    
     
 
