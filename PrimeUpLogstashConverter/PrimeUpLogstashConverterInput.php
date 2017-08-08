@@ -41,7 +41,7 @@ $builder = new PrimeUpLogstashConverterInputBuilder();
        
      
 					while($row = pg_fetch_array($select)){
-						echo $row;
+                                            print_r($row);
 					}
     
 
