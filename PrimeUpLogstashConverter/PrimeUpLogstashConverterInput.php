@@ -34,5 +34,6 @@ $builder = new PrimeUpLogstashConverterInputBuilder();
     $retorno = saveInputConfContent($res_input, $params["confName"]);
     echo $res_input;
     echo "/n";
-    echo  $retorno;
+    print_r ($retorno);
+    
 

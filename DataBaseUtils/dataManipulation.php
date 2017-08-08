@@ -37,5 +37,5 @@ function saveInputConfContent($inputContent, $confName){
         echo "Erro";
     }
     
-    return $result;
+    return $select;
 }
