@@ -12,7 +12,7 @@
     <title>Projeto ELK - Converter</title>
     <?php 
         include('./DataBaseUtils/ConnectionBD.php');
-        include('./PrimeUpLogstashConverterInputBuilder.php')
+        include('./PrimeUpLogstashConverter/PrimeUpLogstashConverterInputBuilder.php')
     ?>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">

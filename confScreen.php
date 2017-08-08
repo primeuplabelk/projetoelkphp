@@ -12,7 +12,7 @@
     <title>Projeto ELK - Converter</title>
     <?php 
         include('./DataBaseUtils/ConnectionBD.php');
-        include('./PrimeUpLogstashConverterInputBuilder.php')
+        include('./PrimeUpLogstashConverter/PrimeUpLogstashConverterInputBuilder.php')
     ?>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -234,7 +234,7 @@
                     </div>
                 </div> 
                 <!-- /.row -->
-                <form method="post" action="PrimeUpLogstashConverterInput.php">
+                <form method="post" action="PrimeUpLogstashConverter/PrimeUpLogstashConverterInput.php">
                     <label>File Configuration</label><br><br>
                     <div class="form-group">
                         <label>Number of Files</label>
