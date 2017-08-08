@@ -9,6 +9,8 @@ include('./ConnectionBD.php');
 function saveInputConfContent($inputContent, $confName){
     
    $result = "";
+   $inpt =  pg_escape_string($inputContent);   
+   $cnf =  pg_escape_string($confName);  
    
    try {
        $select = pg_query("select * from elk.conf where conf_name = '{$cnf}' ");
@@ -19,10 +21,6 @@ function saveInputConfContent($inputContent, $confName){
        
        if(empty($selectArray)){
            
-
-        $inpt =  pg_escape_string($inputContent);   
-        $cnf =  pg_escape_string($confName);   
-        
         $insert = pg_query("insert into elk.conf (input_content, conf_name)
                             values ('{$inpt}','{$cnf}')");
         
