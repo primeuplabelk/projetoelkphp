@@ -12,10 +12,10 @@ function saveInputConfContent($inputContent, $confName){
     
    $result = "";
    
-   try {
+   //try {
        $select = pg_query("select * from elk.conf");
        
-       print_r($select);
+      /* print_r($select);
        
        while ($row = pg_fetch_array($select)) {
             $selectArray[] = $row;
@@ -38,7 +38,7 @@ function saveInputConfContent($inputContent, $confName){
        }
     } catch (Exception $e) {
         echo "Erro";
-    }
+    }*/
     
     return $select;
 }
