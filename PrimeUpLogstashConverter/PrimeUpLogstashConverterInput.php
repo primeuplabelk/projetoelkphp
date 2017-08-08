@@ -39,7 +39,9 @@ $builder = new PrimeUpLogstashConverterInputBuilder();
     
      $select = pg_query("select * from elk.conf");
        
-       print_r($select);
-    
+     
+					while($row = pg_fetch_array($select)){
+						echo $row;
+					}
     
 
