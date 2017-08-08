@@ -7,6 +7,8 @@ include('./ConnectionBD.php');
  */
 
 function saveInputConfContent($inputContent, $confName){
+   
+   include('./ConnectionBD.php');
     
    $result = "";
    
