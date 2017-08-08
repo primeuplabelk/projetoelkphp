@@ -22,16 +22,10 @@ function saveInputConfContent($inputContent, $confName){
        }
        
        if(empty($selectArray)){
+
            
-           $str1 = "teste";
-           $str2 = "teste2";
-                   
-         
-        $teste = pg_escape_string("insert into elk.conf (input_content, conf_name)
-                            values (''$str1'',''$str2'')");  
-        
-                
-        $insert = pg_query($teste);
+        $insert = pg_query("insert into elk.conf (input_content, conf_name)
+                            values ('teste','teste')");
         
         
         $result = "Inserido";
