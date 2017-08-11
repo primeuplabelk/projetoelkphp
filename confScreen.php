@@ -177,8 +177,34 @@
                     </div>
                 </div> 
                 <!-- /.row -->
+                
+                
+                <form method="post" onsubmit="submitLoad()">
+                    <div class="form-group">
+                        <label>Subprefeitura</label>
+                        <?php
+                        $obj = retrieveConfList();
+                        $objUTF = utf8_encode($obj);
+                        $objArray = json_decode($objUTF);
+                        
+                        
+                        print "<select name='confLista' class='form-control'>";
+                        for ($i = 0; $i < sizeof($objArray); $i++) {
+                            $val = $objArray[$i]->{'conf_name'};
+                            $idOption = $objArray[$i]->{'id_conf'};
+                            print "<option value = '$idOption'>$val</option>";
+                        }
+                        print "</select>";
+                        ?>
+                        <p class="help-block">Exemplo: Lapa</p>
+                        
+                        <button type="submit" class="btn btn-default">Carregar</button>
+                    </div>
+                </form>
+                    
+                
                 <form method="post" action="PrimeUpLogstashConverter/PrimeUpLogstashConverterInput.php">
-                    <label>File Configuration</label><br><br>
+                    <label id = "fileConfig">File Configuration</label><br><br>
                     <div class="form-group">
                         <label>Number of Files</label>
                         <label class="radio-inline">
@@ -225,25 +251,6 @@
                         </select>
                     </div>
                     
-                    <div class="form-group">
-                        <label>Subprefeitura</label>
-                        <?php
-                        $obj = retrieveConfList();
-                        $objUTF = utf8_encode($obj);
-                        $objArray = json_decode($objUTF);
-                        
-                        
-                        print "<select name='confLista' class='form-control'>";
-                        for ($i = 0; $i < sizeof($objArray); $i++) {
-                            $val = $objArray[$i]->{'conf_name'};
-                            $idOption = $objArray[$i]->{'id_conf'};
-                            print "<option value = '$idOption'>$val</option>";
-                        }
-                        print "</select>";
-                        ?>
-                        <p class="help-block">Exemplo: Lapa</p>
-                    </div>
-                    
                     <button type="submit" class="btn btn-default">Enviar</button>
                     
 
@@ -269,6 +276,11 @@
     <script src="js/plugins/morris/raphael.min.js"></script>
     <script src="js/plugins/morris/morris.min.js"></script>
     <script src="js/plugins/morris/morris-data.js"></script>
+    <script>
+        function submitLoad(){
+            document.getElementById("fileConfig").value = "funciona";
+        }
+     </script>   
 
 </body>
 
