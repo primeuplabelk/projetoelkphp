@@ -178,8 +178,12 @@
                 </div> 
                 <!-- /.row -->
                 
-                
-                
+                <?php
+                if (isset($_POST['botao'])) { //check if form was submitted
+                    echo "SIM VEIO DE UM SUBMIT";
+                }
+                ?>
+                <form method="post" action="confScreen.php">
                     <div class="form-group">
                         <label>Subprefeitura</label>
                         <?php
@@ -198,9 +202,9 @@
                         ?>
                         <p class="help-block">Exemplo: Lapa</p>
                         
-                        <button onclick="submitLoad()" class="btn btn-default">Carregar</button>
+                        <button name="botao" type="submit" class="btn btn-default">Carregar</button>
                     </div>
-                
+                </form>
                     
                 
                 <form method="post" action="PrimeUpLogstashConverter/PrimeUpLogstashConverterInput.php">
@@ -278,9 +282,7 @@
     <script src="js/plugins/morris/morris-data.js"></script>
     <script>
         function submitLoad(){
-            <?php 
-                echo "FUNCIONA!";
-            ?>
+            alert("funciona");
         }
      </script>   
 
