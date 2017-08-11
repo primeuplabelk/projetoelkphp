@@ -59,3 +59,22 @@ function retrieveConfList(){
     return $jsonLista;
     
 }
+
+function getConfContent($id){
+    $selectArray = ""; 
+    
+     try {
+       $select = pg_query("select * from elk.conf where id_conf = {$id} ");
+
+       while ($row = pg_fetch_array($select)) {
+            $selectArray[] = $row;
+       }
+       
+       $jsonContent = json_encode($selectArray);
+       
+    } catch (Exception $e) {
+        echo "Erro";
+    }
+    
+    return $jsonContent;
+}

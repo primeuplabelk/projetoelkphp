@@ -180,7 +180,10 @@
                 
                 <?php
                 if (isset($_POST['botao'])) { //check if form was submitted
-                    echo "SIM VEIO DE UM SUBMIT";
+                    $params = array(
+                    "confLista" => $_REQUEST['confLista']);
+                    $content = getConfContent($params["confLista"]);
+                    echo $content;
                 }
                 ?>
                 <form method="post" action="confScreen.php">
