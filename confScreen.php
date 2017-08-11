@@ -231,16 +231,15 @@
                         $obj = retrieveConfList();
                         $objUTF = utf8_encode($obj);
                         $objArray = json_decode($objUTF);
-                        $val = $objArray[0]->{0};
-                        echo $val;
                         
-                      /*  print "<select name='confLista' class='form-control'>";
-                        for ($i = 0; $i < sizeof($obj); $i++) {
-                            $val = $obj[$i]->{'conf_name'};
-                            $idOption = $obj[$i]->{'id_conf'};
+                        
+                        print "<select name='confLista' class='form-control'>";
+                        for ($i = 0; $i < sizeof($objArray); $i++) {
+                            $val = $objArray[$i]->{'conf_name'};
+                            $idOption = $objArray[$i]->{'id_conf'};
                             print "<option value = '$idOption'>$val</option>";
                         }
-                        print "</select>";*/
+                        print "</select>";
                         ?>
                         <p class="help-block">Exemplo: Lapa</p>
                     </div>
