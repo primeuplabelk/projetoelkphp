@@ -229,9 +229,10 @@
                         <label>Subprefeitura</label>
                         <?php
                         $obj = retrieveConfList();
-                        $obj2 = utf8_encode($obj);
-                        $val = $obj2[0]->{0};
-                        print $val;
+                        $objUTF = utf8_encode($obj);
+                        $objArray = json_decode($objUTF);
+                        $val = $objArray[0]->{0};
+                        echo $val;
                         
                       /*  print "<select name='confLista' class='form-control'>";
                         for ($i = 0; $i < sizeof($obj); $i++) {

@@ -50,10 +50,12 @@ function retrieveConfList(){
             $selectArray[] = $row;
        }
        
+       $jsonLista = json_encode($selectArray);
+       
     } catch (Exception $e) {
         echo "Erro";
     }
     
-    return $selectArray;
+    return $jsonLista;
     
 }
