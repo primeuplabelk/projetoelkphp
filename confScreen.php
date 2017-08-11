@@ -229,6 +229,7 @@
                         <label>Subprefeitura</label>
                         <?php
                         $obj = retrieveConfList();
+                        print_r($obj);
                         
                         print "<select name='confLista' class='form-control'>";
                         for ($i = 0; $i < sizeof($obj); $i++) {
