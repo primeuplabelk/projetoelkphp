@@ -234,6 +234,7 @@
                         print "<select name='confLista' class='form-control'>";
                         for ($i = 0; $i < sizeof($obj); $i++) {
                             $val = $obj[$i]->{'conf_name'};
+                            print $val;
                             $idOption = $obj[$i]->{'id_conf'};
                             print "<option value = '$idOption'>$val</option>";
                         }
