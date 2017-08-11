@@ -179,7 +179,7 @@
                 <!-- /.row -->
                 
                 
-                <form method="post" onsubmit="submitLoad()">
+                
                     <div class="form-group">
                         <label>Subprefeitura</label>
                         <?php
@@ -198,9 +198,9 @@
                         ?>
                         <p class="help-block">Exemplo: Lapa</p>
                         
-                        <button type="submit" class="btn btn-default">Carregar</button>
+                        <button onclick="submitLoad()" class="btn btn-default">Carregar</button>
                     </div>
-                </form>
+                
                     
                 
                 <form method="post" action="PrimeUpLogstashConverter/PrimeUpLogstashConverterInput.php">
@@ -278,7 +278,7 @@
     <script src="js/plugins/morris/morris-data.js"></script>
     <script>
         function submitLoad(){
-            document.getElementById("fileConfig").value = "funciona";
+            alert("funciona");
         }
      </script>   
 
