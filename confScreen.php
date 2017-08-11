@@ -278,7 +278,9 @@
     <script src="js/plugins/morris/morris-data.js"></script>
     <script>
         function submitLoad(){
-            alert("funciona");
+            <?php 
+                echo "FUNCIONA!";
+            ?>
         }
      </script>   
 
