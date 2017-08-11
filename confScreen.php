@@ -231,6 +231,7 @@
                         $obj = retrieveConfList();
                         $obj2 = utf8_encode($obj);
                         $val = $obj2[0]->{0};
+                        print $val;
                         
                       /*  print "<select name='confLista' class='form-control'>";
                         for ($i = 0; $i < sizeof($obj); $i++) {
