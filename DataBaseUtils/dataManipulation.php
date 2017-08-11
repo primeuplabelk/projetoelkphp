@@ -38,3 +38,22 @@ function saveInputConfContent($inputContent, $confName){
     
     return $result;
 }
+
+function retrieveConfList(){
+   
+    $selectArray = ""; 
+    
+     try {
+       $select = pg_query("select * from elk.conf ");
+
+       while ($row = pg_fetch_array($select)) {
+            $selectArray[] = $row;
+       }
+       
+    } catch (Exception $e) {
+        echo "Erro";
+    }
+    
+    return $selectArray;
+    
+}

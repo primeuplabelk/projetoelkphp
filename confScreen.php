@@ -12,7 +12,8 @@
     <title>Projeto ELK - Converter</title>
     <?php 
         include('./DataBaseUtils/ConnectionBD.php');
-        include('./PrimeUpLogstashConverter/PrimeUpLogstashConverterInputBuilder.php')
+        include('./PrimeUpLogstashConverter/PrimeUpLogstashConverterInputBuilder.php');
+        include('./DataBaseUtils/dataManipulation.php');
     ?>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -222,6 +223,22 @@
                             <option value="ANSI_X3.4-1968" >ANSI_X3.4-1968</option>
                             <option value="UTF-8" >UTF-8</option>
                         </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Subprefeitura</label>
+                        <?php
+                        $obj = retrieveConfList();
+                        
+                        print "<select name='confLista' class='form-control'>";
+                        for ($i = 0; $i < sizeof($obj); $i++) {
+                            $val = $obj4[$i]->{'conf_name'};
+                            $idOption4 = $obj4[$i]->{'id_conf'};
+                            print "<option value = '$idOption'>$val</option>";
+                        }
+                        print "</select>";
+                        ?>
+                        <p class="help-block">Exemplo: Lapa</p>
                     </div>
                     
                     <button type="submit" class="btn btn-default">Enviar</button>
