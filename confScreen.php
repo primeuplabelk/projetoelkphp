@@ -229,12 +229,12 @@
                         <label>Subprefeitura</label>
                         <?php
                         $obj = retrieveConfList();
-                        print_r($obj);
+                        
                         
                         print "<select name='confLista' class='form-control'>";
                         for ($i = 0; $i < sizeof($obj); $i++) {
-                            $val = $obj4[$i]->{5};
-                            $idOption4 = $obj4[$i]->{0};
+                            $val = $obj[$i]->{'conf_name'};
+                            $idOption4 = $obj[$i]->{'id_conf'};
                             print "<option value = '$idOption'>$val</option>";
                         }
                         print "</select>";
