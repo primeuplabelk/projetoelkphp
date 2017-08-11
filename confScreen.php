@@ -185,7 +185,7 @@
                     $content = getConfContent($params["confLista"]);
                     $contentUTF = utf8_encode($content);
                     $contentArray = json_decode($contentUTF);
-                    echo $contentArray[0]->{'input_content'} . $contentArray[0]->{'filter_content'} . $contentArray[0]->{'output_content'} ;
+                    echo $contentArray[0]->{'input_content'};
                 }
                 ?>
                 <form method="post" action="confScreen.php">
