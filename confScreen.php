@@ -171,23 +171,24 @@
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
-                                <i class="fa fa-dashboard"></i> Gabriel -  aHelen
+                                <i class="fa fa-dashboard"></i> 
+                                <?php
+                                if (isset($_POST['botao'])) { //check if form was submitted
+                                    $params = array(
+                                        "confLista" => $_REQUEST['confLista']);
+                                    $content = getConfContent($params["confLista"]);
+                                    $contentUTF = utf8_encode($content);
+                                    $contentArray = json_decode($contentUTF);
+                                    echo $contentArray[0]->{'input_content'};
+                                }
+                                ?>
                             </li>
                         </ol>
                     </div>
                 </div> 
                 <!-- /.row -->
                 
-                <?php
-                if (isset($_POST['botao'])) { //check if form was submitted
-                    $params = array(
-                    "confLista" => $_REQUEST['confLista']);
-                    $content = getConfContent($params["confLista"]);
-                    $contentUTF = utf8_encode($content);
-                    $contentArray = json_decode($contentUTF);
-                    echo $contentArray[0]->{'input_content'};
-                }
-                ?>
+                
                 <form method="post" action="confScreen.php">
                     <div class="form-group">
                         <label>Subprefeitura</label>
