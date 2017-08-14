@@ -191,7 +191,7 @@
                 
                 <form method="post" action="confScreen.php">
                     <div class="form-group">
-                        <label>Subprefeitura</label>
+                        <label>Carregar Conf</label>
                         <?php
                         $obj = retrieveConfList();
                         $objUTF = utf8_encode($obj);
@@ -206,12 +206,17 @@
                         }
                         print "</select>";
                         ?>
-                        <p class="help-block">Exemplo: Lapa</p>
+                        <br>
                         
                         <button name="botao" type="submit" class="btn btn-default">Carregar</button>
                     </div>
                 </form>
                     
+                <?php
+                if (isset($_POST['botao'])) {
+                   
+                    
+                ?>    
                 
                 <form method="post" action="PrimeUpLogstashConverter/PrimeUpLogstashConverterInput.php">
                     <label id = "fileConfig">File Configuration</label><br><br>
@@ -266,6 +271,11 @@
 
                 </form>
                 
+                <?php
+                    } else {
+                        echo "sem submit";
+                    }
+                ?>
 
             </div>
             <!-- /.container-fluid -->
@@ -286,11 +296,7 @@
     <script src="js/plugins/morris/raphael.min.js"></script>
     <script src="js/plugins/morris/morris.min.js"></script>
     <script src="js/plugins/morris/morris-data.js"></script>
-    <script>
-        function submitLoad(){
-            alert("funciona");
-        }
-     </script>   
+    
 
 </body>
 
