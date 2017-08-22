@@ -293,8 +293,8 @@
                                                     <input id ="localhostButton" onchange="enableIPField()" type="checkbox" value="">localhost
                                                 </label>
                                             </div>
-                                        <input disabled id="hostsElastic" name="hostsElastic" class="form-control" placeholder="Hosts" required>
-                                        <input id="portElastic" name="portElastic" class="form-control" placeholder="Port" required>
+                                        <input id="hostsElastic" name="hostsElastic" class="form-control" placeholder="Hosts" required>
+                                        <input disabled id="portElastic" name="portElastic" class="form-control" placeholder="Port" required>
 
                                 </div>
                                 
@@ -343,9 +343,11 @@
             if(document.getElementById("elasticbutton").checked) {
                 document.getElementById("indexElastic").disabled = false;
                 document.getElementById("hostsElastic").disabled = false;
+                document.getElementById("portElastic").disabled = false;
             } else {
                 document.getElementById("indexElastic").disabled = true;
                 document.getElementById("hostsElastic").disabled = true;
+                document.getElementById("portElastic").disabled = true;
             }
             
         }
