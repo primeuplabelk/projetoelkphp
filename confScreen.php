@@ -285,9 +285,17 @@
                                     </label>
                                 </div>
                                 
+                                
                                 <div class="form-group">
                                         <label>Hosts </label>
+                                        <div class="checkbox">
+                                                <label>
+                                                    <input id ="localhostButton" onchange="enableIPField()" type="checkbox" value="">localhost
+                                                </label>
+                                            </div>
                                         <input disabled id="hostsElastic" name="hostsElastic" class="form-control" placeholder="Hosts" required>
+                                        <input id="portElastic" name="portElastic" class="form-control" placeholder="Port" required>
+
                                 </div>
                                 
                                 <div class="form-group">
@@ -341,6 +349,19 @@
             }
             
         }
+        
+        function enableIPField(){
+            
+            if(document.getElementById("localhostButton").checked) {
+                document.getElementById("hostsElastic").disabled = true;
+            } else {                  
+                document.getElementById("hostsElastic").disabled = false;
+            }
+            
+        }
+        
+        
+        
     </script>
 
 </body>
