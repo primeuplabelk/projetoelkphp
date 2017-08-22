@@ -213,7 +213,7 @@
                 </form>
                     
                 <?php
-                if (isset($_POST['botao'])) {
+                if (!isset($_POST['botao'])) {
                    
                     
                 ?>    
@@ -272,9 +272,42 @@
                 </form>
                 
                 <?php
-                    } else {
-                        echo "sem submit";
-                    }
+                    } else { ?>
+                    
+                <form method="post" action="PrimeUpLogstashConverter/PrimeUpLogstashConverterInput.php">
+                    <label id = "fileConfig">Output Configuration</label><br><br>
+                    
+                    <div class="form-group">
+                                <label>Output</label>
+                                <div class="checkbox">
+                                    <label>
+                                        <input id ="elasticbutton" type="checkbox" onchange="enableHosts()" value="">ElasticSearch
+                                    </label>
+                                </div>
+                                
+                                <div class="form-group">
+                                        <label>Hosts </label>
+                                        <input disabled id="hostsElastic" name="hostsElastic" class="form-control" placeholder="Hosts" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                        <label>Index </label>
+                                        <input disabled id="indexElastic" name="indexElastic" class="form-control" placeholder="Index">
+                                </div>
+                                
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">Stdout
+                                    </label>
+                                </div>
+                                
+                            </div>
+                    
+                    <button type="submit" class="btn btn-default">Enviar</button>
+                    
+
+                </form>
+                <?php }
                 ?>
 
             </div>
@@ -296,7 +329,19 @@
     <script src="js/plugins/morris/raphael.min.js"></script>
     <script src="js/plugins/morris/morris.min.js"></script>
     <script src="js/plugins/morris/morris-data.js"></script>
-    
+    <script>
+        function enableHosts(){
+            
+            if(document.getElementById("elasticbutton").checked) {
+                document.getElementById("indexElastic").disabled = false;
+                document.getElementById("hostsElastic").disabled = false;
+            } else {
+                document.getElementById("indexElastic").disabled = true;
+                document.getElementById("hostsElastic").disabled = true;
+            }
+            
+        }
+    </script>
 
 </body>
 

@@ -2,67 +2,41 @@
 
 include("./PrimeUpLogstashConverterInputCst.php");
 
-class PrimeUpLogstashConverterInputBuilder {
+class PrimeUpLogstashConverterOutputBuilder {
    
-    public static function buildInputHeader($params){
-        $inputCst = new PrimeUpLogstashConverterInputCst;
+    public static function buildOutputHeader($params){
         
-            $inputFinalString = $inputCst::INPUT_TAG_OPENING;
-            $inputFinalString .= $inputCst::LINE_BREAK;
-            $inputFinalString .= $inputCst::FILE_TAG_OPENING;
-            $inputFinalString .= $inputCst::LINE_BREAK;
-            
-            
+        $outputCst = new PrimeUpLogstashConverterOutputCst;
+        $inputCst = new PrimeUpLogstashConverterInputCst; //using some constants from InputCst as well
+        
+            $outputFinalString = $outputCst::OUTPUT_TAG_OPENING;
+            $outputFinalString .= $outputCst::LINE_BREAK;
                 
-            $inputFinalString .= $inputCst::PATH_TAG;
-            $inputFinalString .= $params["path"];
-            $inputFinalString .= $inputCst::LINE_BREAK;
-                
+            $outputFinalString .= $outputCst::STDOUT_TAG;
+            $outputFinalString .= $outputCst::LINE_BREAK;             
             
-            if(strcmp($params["start_position"], "") != 0){
-                
-                $inputFinalString .= $inputCst::STARTING_POSITION_TAG;
-                $inputFinalString .= $params["start_position"];
-                $inputFinalString .= $inputCst::LINE_BREAK;
+            $outputFinalString .= $inputCst::CODEC_TAG;
+            $outputFinalString .= $outputCst::RUBYDEBUG_TAG;
+            $outputFinalString .= $outputCst::LINE_BREAK;
+            $outputFinalString .= $inputCst::CLOSING_BRACKETS;                
+           
+            $outputFinalString .= $outputCst::ELASTICSEARCH_TAG;
+            $outputFinalString .= $outputCst::LINE_BREAK;
+            $outputFinalString .= $outputCst::HOSTS_TAG;
+            $outputFinalString .= " ";
+            $outputFinalString .= $outputCst::LINE_BREAK;
+            $outputFinalString .= $outputCst::INDEX_TAG;
+            $outputFinalString .= " ";
+            $outputFinalString .= $outputCst::LINE_BREAK;
+            $outputFinalString .= $inputCst::CLOSING_BRACKETS;
             
-            }
+            $outputFinalString .= $inputCst::CLOSING_BRACKETS;
+       
+           
             
-            if(strcmp($params["ignore_older"], "") != 0){
-                
-                $inputFinalString .= $inputCst::IGNORE_OLDER_TAG;
-                $inputFinalString .= $params["ignore_older"];
-                $inputFinalString .= $inputCst::LINE_BREAK;
-            
-            }
-            
-            if(strcmp($params["sincedb_path"], "") != 0){
-                
-                $inputFinalString .= $inputCst::SINCEDB_PATH_TAG;
-                $inputFinalString .= $params["sincedb_path"];
-                $inputFinalString .= $inputCst::LINE_BREAK;
-                
-            }
-            
-            if(strcmp($params["charset"], "") != 0){
-                $inputFinalString .= $inputCst::CODEC_TAG;
-                $inputFinalString .= $inputCst::CODEC_TAG_PLAIN;
-                $inputFinalString .= $inputCst::LINE_BREAK;
-                $inputFinalString .= $inputCst::CHARSET_TAG;
-                $inputFinalString .= $params["charset"];
-                $inputFinalString .= $inputCst::LINE_BREAK;
-                $inputFinalString .= $inputCst::CLOSING_BRACKETS;
-            }
-            
-            $inputFinalString .= $inputCst::LINE_BREAK;        
-            $inputFinalString .= $inputCst::CLOSING_BRACKETS;
-            $inputFinalString .= $inputCst::LINE_BREAK;
-            $inputFinalString .= $inputCst::CLOSING_BRACKETS;
-            
-            $inputFinalString2 = str_replace("\n", "<br>",$inputFinalString);
-            
-             file_put_contents("/confExp/test.conf", $inputFinalString);
-            
-       return $inputFinalString2;
+            $outputFinalString2 = str_replace("\n", "<br>",$outputFinalString);
+                        
+       return $outputFinalString2;
     }
    
 }
