@@ -212,11 +212,7 @@
                     </div>
                 </form>
                     
-                <?php
-                if (!isset($_POST['botao'])) {
-                   
                     
-                ?>    
                 
                 <form method="post" action="PrimeUpLogstashConverter/PrimeUpLogstashConverterInput.php">
                     <label id = "fileConfig">File Configuration</label><br><br>
@@ -271,12 +267,11 @@
 
                 </form>
                 
-                <?php
-                    } else { ?>
+               
                     
-                <form method="post" action="PrimeUpLogstashConverter/PrimeUpLogstashConverterInput.php">
+                <form method="post" action="PrimeUpLogstashConverter/PrimeUpLogstashConverterOutput.php">
                     <label id = "fileConfig">Output Configuration</label><br><br>
-                    
+                    <fieldset disabled name="fieldsetOutput">
                     <div class="form-group">
                                 <label>Output</label>
                                 <div class="checkbox">
@@ -293,7 +288,7 @@
                                                     <input id ="localhostButton" onchange="enableIPField()" type="checkbox" value="">localhost
                                                 </label>
                                             </div>
-                                        <input id="hostsElastic" name="hostsElastic" class="form-control" placeholder="Hosts" required>
+                                        <input disabled id="hostsElastic" name="hostsElastic" class="form-control" placeholder="Hosts" required>
                                         <input disabled id="portElastic" name="portElastic" class="form-control" placeholder="Port" required>
 
                                 </div>
@@ -313,11 +308,9 @@
                     
                     <button type="submit" class="btn btn-default">Enviar</button>
                     
-
+                    </fieldset>
                 </form>
-                <?php }
-                ?>
-
+                
             </div>
             <!-- /.container-fluid -->
 
