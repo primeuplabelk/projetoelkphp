@@ -276,7 +276,7 @@
                                 <label>Output</label>
                                 <div class="checkbox">
                                     <label>
-                                        <input id ="elasticbutton" type="checkbox" onchange="enableHosts()" value="">ElasticSearch
+                                        <input id ="elasticbutton" name = "elasticbutton" type="checkbox" onchange="enableHosts()" value="">ElasticSearch
                                     </label>
                                 </div>
                                 
@@ -300,7 +300,7 @@
                                 
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="">Stdout
+                                        <input type="checkbox" name="stdout" value="">Stdout
                                     </label>
                                 </div>
                                 

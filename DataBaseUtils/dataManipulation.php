@@ -38,6 +38,39 @@ function saveInputConfContent($inputContent, $confName){
     
     return $result;
 }
+function saveOutputConfContent($outputContent, $confName){
+    
+   $result = "";
+   $oupt =  pg_escape_string($outputContent);   
+   $cnf =  pg_escape_string($confName);  
+   
+   try {
+       $select = pg_query("select * from elk.conf where conf_name = '{$cnf}' ");
+
+       while ($row = pg_fetch_array($select)) {
+            $selectArray[] = $row;
+       }
+       
+       if(empty($selectArray)){
+           
+        $insert = pg_query("insert into elk.conf (output_content, conf_name)
+                            values ('{$oupt}','{$cnf}')");
+        
+        
+        $result = "Inserido";
+    
+       } else{
+           
+        $update = pg_query("update elk.conf (output_content, conf_name)
+                            values ('{$oupt}','{$cnf}')");
+            
+       }
+    } catch (Exception $e) {
+        echo "Erro";
+    }
+    
+    return $result;
+}
 
 function retrieveConfList(){
    
